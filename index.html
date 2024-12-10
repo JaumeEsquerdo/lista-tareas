@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetador de lista de tareas</title>
+</head>
+<body>
+    <h1>Escribe las tareas</h1>
+    <form id="Form" action="">
+        <input type="text" id="TextInput" placeholder="Escribe aquí la tarea a guardar">
+        <button id="Submit" type="submit">Añadir</button>
+    </form>
+    <div id="OutputContainer"></div>
+    
+
+    <script>
+
+        const form = document.getElementById(`Form`);
+        const submit = document.getElementById(`Submit`);
+        const input = document.getElementById(`TextInput`);
+        const output = document.getElementById(`OutputContainer`);
+
+        submit.addEventListener('click',()=> {
+            event.preventDefault();
+
+            output.innerHTML += `<div> <input type="checkbox">${input.value}</div>`;
+            input.value = "";
+            
+        });
+
+        
+
+
+
+    </script>
+
+</body>
+</html>
